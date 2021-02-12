@@ -39,7 +39,6 @@ def create_init_module(commit, version):
 
 commit = get_commit_hash()
 version = get_version(commit)
-print(version)
 download_tipsi_builder_module(commit)
 create_init_module(commit, version)
 setup(
