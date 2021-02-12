@@ -1,0 +1,26 @@
+{% set data = load_setup_py_data(setup_file='setup.py') %}
+package:
+  name: tipsi
+  version: {{ data.get('version') }}
+
+build:
+  number: 0
+  noarch: python
+
+source:
+  path: ../
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+    - matplotlib
+    - h5py
+  run:
+    - python >=3.6
+    - numpy >=1.19
+    - scipy
+    - matplotlib
+    - h5py
